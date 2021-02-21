@@ -1,0 +1,4 @@
+sugano/__pycache__
+peer/__pycache__/
+peer/migrations/
+db.sqlite3
