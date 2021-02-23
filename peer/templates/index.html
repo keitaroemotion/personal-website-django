@@ -1,12 +1,19 @@
-itest
-<!--
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
-->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MicroTeach </title>
+    </head>
+    <body>
+        {% include '_header.html' %}
+        <div class="caption"> 世界で一番安い転職エージェント
+            <div class="caption2"> 求人掲載、採用ともに0円 </div>
+            <div class="caption3"> もう、採用活動に無駄なお金は出させません！ </div>
+        </div>
+        
+        <div class="button-body">
+            <input type="button" class="button" value="今すぐ始める！">
+        </div>
+    </body>
+</html>

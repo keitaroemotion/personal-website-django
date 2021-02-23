@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MicroTeach </title>
+    </head>
+    <body>
+        {% include '_header.html' %}
+        <div class="caption">
+            <form action="signup_done" method="post">
+                {% csrf_token %}
+                <div class="signup_field">
+                    <div class="field_name"> 会社名 </div>
+                    <input id="company_name"
+                           class="text_field"
+                           type="text"
+                           name="company_name">
+                </div>
+                <div class="signup_field">
+                    <div class="field_name"> メールアドレス </div>
+                    <input id="email"
+                           class="text_field"
+                           type="text"
+                           name="email">
+                </div>
+                <!-- need to encrypt password -->
+                <div class="signup_field">
+                    <div class="field_name"> パスワード </div>
+                    <input id="password"
+                           class="text_field"
+                           type="password"
+                           name="password">
+                </div>
+                <div class="button-body">
+                    <input type="submit" class="button" value="登録">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
